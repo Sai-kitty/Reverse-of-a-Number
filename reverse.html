@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ReverseNumber</title>
+    <style>
+        .bg-container{
+            text-align: center;
+            border-width:4px;
+            height: 40vh;
+            width: 35vw;
+            background-color: rgb(234, 16, 12);
+            padding: 30px;
+            margin-top:10%;
+            margin-left:30%;
+            font-weight: bold;
+            border-radius: 50px;
+            border-style: solid;
+            border-color: rgb(13, 212, 243);
+            color: white;
+        }
+        body{
+            background-color: black;
+        }
+        .button{
+                height: 27px;
+                width: 65px;
+                border-radius: 10px;
+                border-width: 0px;
+                background-color: rgb(24, 198, 211);
+            }
+        .heading{
+            font-family:Georgia, 'Times New Roman', Times, serif;
+            font-size: 32px;
+            color:aqua;
+        }
+        .para{
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="bg-container">
+         <h1 class="heading">Reverse of a number</h1>
+         <p class="para">Enter the number to reverse</p>
+         <input type="text" id="inp"/><br><br>
+         <button class="button" onclick="reverseFun()">Reverse</button><br>
+         <p id="result"></p>
+    </div>
+
+    <script>
+        function reverseFun()
+        {
+         const inputEle=document.getElementById("inp").value;
+         const reversedNum=parseInt(inputEle.toString().split("").reverse().join(""));
+         document.getElementById("result").textContent=`Reversed Number : ${reversedNum}`;
+        }
+    </script>
+</body>
+</html>
